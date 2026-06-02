@@ -176,33 +176,31 @@ body {
     display: inline-block;
 }
 
-
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: transparent;
+    background-color: #202A44;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
 
 .dropdown-content a:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-.dropdown:hover .dropdown-content {
-    display: block;
+@media screen and (min-width: 813px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 }
 
 .dropdown:hover .dropbtn {
@@ -219,7 +217,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
 
 .hero::before {
     content: "";
@@ -627,7 +624,7 @@ body {
 
 .reflection-sub h3 {
     color: #818cf8;
-    
+
     font-size: 1.1rem;
     font-weight: 500;
     margin-top: 0;
@@ -724,7 +721,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
     width: 100%;
-   
+
     perspective: 1000px;
 }
 
@@ -768,7 +765,7 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    
+
     background: rgba(255, 255, 255, 0.03);
     border: 0.5px solid rgba(255, 255, 255, 0.07);
     border-radius: 10px;
@@ -776,14 +773,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     text-align: left;
 }
 
 .card-back {
     transform: rotateY(180deg);
     background: rgba(255, 255, 255, 0.05);
-    
+
 }
 
 .card-top {
@@ -911,6 +908,7 @@ body {
 .blog-post:hover .post-link {
     opacity: 1;
 }
+
 .about-section-vertical {
     padding: 32px 0;
     width: 100%;
@@ -920,7 +918,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
     gap: 32px;
     margin-top: 36px;
     max-width: 750px;
@@ -946,7 +944,7 @@ body {
     height: 150px;
     border-radius: 50%;
     padding: 4px;
-    
+
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
@@ -991,7 +989,7 @@ body {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-   
+
     width: 100%;
 }
 
@@ -1024,6 +1022,7 @@ body {
         font-size: 17px;
     }
 }
+
 /* --------------------------------------------------- FOOTER ---------------------------------------------------------------- */
 .footer {
     background-color: #182038;
@@ -1139,27 +1138,22 @@ body {
 @media screen and (max-width: 812px) {
     .menu-toggle {
         display: flex;
-        
     }
 
     .nav-menu {
         position: fixed;
         top: 70px;
-       
         left: -100%;
-      
         flex-direction: column;
         background-color: #0e1220;
         width: 100%;
         height: calc(100vh - 70px);
-       
         gap: 0;
         transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 40px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /
     .nav-menu.active {
         left: 0;
     }
@@ -1176,7 +1170,6 @@ body {
         width: 100%;
     }
 
-   
     .menu-toggle.is-active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -1187,6 +1180,36 @@ body {
 
     .menu-toggle.is-active .bar:nth-child(3) {
         transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropbtn {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 1.2rem;
+        font-family: inherit;
+    }
+
+    .dropdown-content {
+        position: relative !important;
+        display: none;
+        min-width: 100%;
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .dropdown-content a {
+        color: #a4a6b0;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 1.1rem;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block !important;
     }
 }
 @media screen and (max-width: 600px) {
