@@ -62,7 +62,7 @@
             <div class="hero-headline">
                 <p class="hero-eyebrow">BLOG ACADÉMICO · 2026</p>
                 <h1 class="hero-title">
-                    Mis  5 Temas<br>
+                    Mis 5 Temas<br>
                     <em>Favoritos</em><br>
                     de el curso.
                 </h1>
@@ -239,10 +239,7 @@
     <footer class="footer">
         <span class="footer-brand">Introducción a los Sistemas de Computo</span>
         <div class="footer-links">
-            <a href="">Home</a>
-            <a href="">Artículos</a>
-            <a href="">Sobre mí</a>
-            <a href="">Contacto</a>
+
         </div>
         <span class="footer-copy">© 2026 BLOG ACADÉMICO</span>
     </footer>
@@ -251,6 +248,8 @@
     <script>
         const menu = document.querySelector('#mobile-menu');
         const menuLinks = document.querySelector('.nav-menu');
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
 
         menu.addEventListener('click', function () {
             menu.classList.toggle('is-active');
@@ -261,6 +260,14 @@
             menu.classList.remove('is-active');
             menuLinks.classList.remove('active');
         }));
+
+        dropbtn.addEventListener('click', function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+            }
+        });
     </script>
 </body>
 
