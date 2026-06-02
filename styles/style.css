@@ -215,13 +215,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: calc(100vh - 105px);
-    /* llena la pantalla menos el navbar */
     background-color: #182038;
     position: relative;
     overflow: hidden;
 }
 
-/* ---- fondo decorativo (círculos) ---- */
+
 .hero::before {
     content: "";
     position: absolute;
@@ -248,7 +247,7 @@ body {
     z-index: 0;
 }
 
-/* ---- lado izquierdo ---- */
+
 .hero-left {
     padding: 56px 64px;
     display: flex;
@@ -353,7 +352,7 @@ body {
     color: rgba(255, 255, 255, 0.18);
 }
 
-/* ---- lado derecho ---- */
+
 .hero-right {
     background-color: #0e1728;
     position: relative;
@@ -364,7 +363,7 @@ body {
     padding: 40px;
 }
 
-/* cuadrícula tipo circuito */
+
 .hero-right::before {
     content: "";
     position: absolute;
@@ -375,7 +374,7 @@ body {
     background-size: 48px 48px;
 }
 
-/* resplandor central */
+
 .hero-right::after {
     content: "";
     position: absolute;
@@ -473,6 +472,223 @@ body {
     color: rgba(255, 255, 255, 0.18);
 }
 
+/* ------------------------------------------------------- Artículo ---------------------------------------------------------- */
+
+.article-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    background-color: #0e1220;
+}
+
+
+.article-header {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.article-meta {
+    display: flex;
+    gap: 20px;
+    color: #a4a6b0;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.article-meta i {
+    color: #a78bfa;
+    /* Detalle morado de tu paleta */
+    margin-right: 6px;
+}
+
+.article-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #a78bfa, #818cf8);
+    margin-top: 16px;
+    border-radius: 2px;
+}
+
+
+.concept-flow {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.flow-step {
+    display: flex;
+    gap: 32px;
+    position: relative;
+}
+
+
+.flow-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.indicator-line {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(167, 139, 250, 0.3) 0%, rgba(14, 18, 32, 0) 100%);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+
+.flow-step:last-child .indicator-line {
+    height: 40px;
+}
+
+.indicator-node {
+    width: 44px;
+    height: 44px;
+    background-color: #161b30;
+    border: 2px solid #a78bfa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    font-size: 1.1rem;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+.flow-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.flow-step:hover .indicator-node {
+    background-color: #a78bfa;
+    color: #161b30;
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+}
+
+.flow-step:hover .flow-card {
+    border-color: rgba(167, 139, 250, 0.2);
+    transform: translateX(5px);
+}
+
+.card-subtitle {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.card-text {
+    color: #a4a6b0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+
+.interactive-box {
+    background-color: rgba(167, 139, 250, 0.03);
+    border-left: 3px solid #818cf8;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+}
+
+
+.reflection-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.02) 0%, rgba(167, 139, 250, 0.01) 100%);
+}
+
+.reflection-sub {
+    margin-bottom: 24px;
+}
+
+.reflection-sub:last-child {
+    margin-bottom: 0;
+}
+
+.reflection-sub h3 {
+    color: #818cf8;
+    
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.article-collage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 140px;
+    gap: 12px;
+    width: 100%;
+}
+
+.article-collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+
+.article-collage-item.item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.article-collage-item.item-wide {
+    grid-column: span 2;
+}
+
+.article-collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(15%) brightness(85%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s;
+}
+
+
+.article-collage-item:hover img {
+    transform: scale(1.04);
+    filter: grayscale(0%) brightness(100%);
+}
+
+
+@media (max-width: 768px) {
+    .article-collage-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 180px;
+        gap: 10px;
+    }
+
+    .article-collage-item.item-large,
+    .article-collage-item.item-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
 /*----------------------------------------------------------- Tarjetas ------------------------------------------------------- */
 .main {
     background-color: #0e1220;
@@ -508,7 +724,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
     width: 100%;
-    /* Ocupa todo el ancho disponible */
+   
     perspective: 1000px;
 }
 
@@ -552,7 +768,7 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    /* Trasladamos los estilos de padding, fondo y bordes directamente a las caras */
+    
     background: rgba(255, 255, 255, 0.03);
     border: 0.5px solid rgba(255, 255, 255, 0.07);
     border-radius: 10px;
@@ -560,14 +776,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Alinea el contenido arriba y abajo de forma limpia */
+    
     text-align: left;
 }
 
 .card-back {
     transform: rotateY(180deg);
     background: rgba(255, 255, 255, 0.05);
-    /* Un fondo ligeramente distinto para la trasera */
+    
 }
 
 .card-top {
@@ -695,7 +911,119 @@ body {
 .blog-post:hover .post-link {
     opacity: 1;
 }
+.about-section-vertical {
+    padding: 32px 0;
+    width: 100%;
+}
 
+.about-vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    gap: 32px;
+    margin-top: 36px;
+    max-width: 750px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.about-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    width: 100%;
+}
+
+
+.profile-photo-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 4px;
+    
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-name-vertical {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #f0ede4;
+    margin-top: 8px;
+}
+
+.profile-role-vertical {
+    font-size: 14px;
+    color: cyan;
+    font-weight: 400;
+    margin-top: -6px;
+    letter-spacing: 0.05em;
+}
+
+.profile-skills-vertical {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.about-content-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+   
+    width: 100%;
+}
+
+.about-text-lead-vertical {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #f0ede4;
+}
+
+.about-text-lead-vertical em {
+    font-style: italic;
+    color: cyan;
+}
+
+.about-text-vertical {
+    font-size: 14.5px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(228, 226, 217, 0.6);
+}
+
+@media (max-width: 768px) {
+    .about-vertical-container {
+        padding: 0 16px;
+        gap: 24px;
+    }
+
+    .about-text-lead-vertical {
+        font-size: 17px;
+    }
+}
 /* --------------------------------------------------- FOOTER ---------------------------------------------------------------- */
 .footer {
     background-color: #182038;
@@ -811,27 +1139,27 @@ body {
 @media screen and (max-width: 812px) {
     .menu-toggle {
         display: flex;
-        /* Mostramos la hamburguesa */
+        
     }
 
     .nav-menu {
         position: fixed;
         top: 70px;
-        /* Justo debajo del navbar */
+       
         left: -100%;
-        /* Escondido por defecto a la izquierda */
+      
         flex-direction: column;
         background-color: #0e1220;
         width: 100%;
         height: calc(100vh - 70px);
-        /* Ocupa el resto de la pantalla */
+       
         gap: 0;
         transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 40px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Clase que activará JavaScript para mostrar el menú */
+    /
     .nav-menu.active {
         left: 0;
     }
@@ -848,7 +1176,7 @@ body {
         width: 100%;
     }
 
-    /* Animación del botón Hamburguesa -> "X" al abrirse */
+   
     .menu-toggle.is-active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -859,5 +1187,24 @@ body {
 
     .menu-toggle.is-active .bar:nth-child(3) {
         transform: translateY(-8.5px) rotate(-45deg);
+    }
+}
+@media screen and (max-width: 600px) {
+    .flow-step {
+        gap: 16px;
+    }
+
+    .indicator-node {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .flow-card {
+        padding: 20px;
+    }
+
+    .article-title {
+        font-size: 2rem;
     }
 }
