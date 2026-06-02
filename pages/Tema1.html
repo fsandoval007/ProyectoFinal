@@ -178,7 +178,7 @@
                     <div class="indicator-node"><i class="fa-solid fa-images"></i></div>
                 </div>
                 <div class="flow-card">
-                    
+
 
                     <div class="interactive-box clear-box">
                         <div class="article-collage-grid">
@@ -365,6 +365,8 @@
     <script>
         const menu = document.querySelector('#mobile-menu');
         const menuLinks = document.querySelector('.nav-menu');
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
 
         menu.addEventListener('click', function () {
             menu.classList.toggle('is-active');
@@ -375,6 +377,14 @@
             menu.classList.remove('is-active');
             menuLinks.classList.remove('active');
         }));
+
+        dropbtn.addEventListener('click', function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+            }
+        });
     </script>
 </body>
 

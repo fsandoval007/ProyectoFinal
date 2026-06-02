@@ -43,7 +43,7 @@
                         <li classname="nav-link"><a href="Tema5.html">Hardware y Software</a></li>
                     </ul>
                 </li>
-                <li><a href="SobreMi.html" classname="nav-link">Sobre mí</a></li>
+                <li><a href="SobreMi.html" class="nav-link active">Sobre mí</a></li>
 
             </ul>
         </div>
@@ -87,7 +87,7 @@
 
     <section class="about-section-vertical" id="sobre-mi">
         <div class="section-header">
-            <span class="section-label">Sobre mí</span>
+            <span class="section-label"></span>
             <div class="section-line"></div>
         </div>
 
@@ -293,6 +293,8 @@
     <script>
         const menu = document.querySelector('#mobile-menu');
         const menuLinks = document.querySelector('.nav-menu');
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
 
         menu.addEventListener('click', function () {
             menu.classList.toggle('is-active');
@@ -303,6 +305,14 @@
             menu.classList.remove('is-active');
             menuLinks.classList.remove('active');
         }));
+
+        dropbtn.addEventListener('click', function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+            }
+        });
     </script>
 </body>
 
