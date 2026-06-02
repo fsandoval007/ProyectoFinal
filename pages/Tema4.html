@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/monitor.png">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -21,7 +21,7 @@
     <nav class="navbar">
         <div class="nav-container">
 
-            <a href="#" class="nav-logo">
+            <a href="../index.html" class="nav-logo">
                 <i class="fa-solid fa-book-open"></i> BLOG ACADÉMICO
             </a>
 
@@ -32,18 +32,18 @@
             </button>
 
             <ul id="nevbar" class="nav-menu">
-                <li><a href="#" class="nav-link active">Inicio</a></li>
+                <li><a href="../index.html" class="nav-link ">Inicio</a></li>
                 <li class="nav-link dropdown">
                     <button class="dropbtn">Temas</button>
                     <ul class="dropdown-content nav-link">
-                        <li classname="nav-link"><a href="pages/Tema1.html">Historia de las Computadoras</a></li>
-                        <li classname="nav-link"><a href="pages/Tema2.html">Arquitectura de Computadoras</a></li>
-                        <li classname="nav-link"><a href="pages/Tema3.html">Sistemas Operativos</a></li>
-                        <li classname="nav-link"><a href="pages/Tema4.html">Virtualización</a></li>
-                        <li classname="nav-link"><a href="pages/Tema5.html">Hardware y Software</a></li>
+                        <li classname="nav-link"><a href="Tema1.html">Historia de las Computadoras</a></li>
+                        <li classname="nav-link"><a href="Tema2.html">Arquitectura de Computadoras</a></li>
+                        <li classname="nav-link"><a href="Tema3.html">Sistemas Operativos</a></li>
+                        <li classname="nav-link"><a href="Tema4.html">Virtualización</a></li>
+                        <li classname="nav-link"><a href="Tema5.html">Hardware y Software</a></li>
                     </ul>
                 </li>
-                <li><a href="pages/SobreMi.html" classname="nav-link">Sobre mí</a></li>
+                <li><a href="SobreMi.html" classname="nav-link">Sobre mí</a></li>
 
             </ul>
         </div>
@@ -62,9 +62,8 @@
             <div class="hero-headline">
                 <p class="hero-eyebrow">BLOG ACADÉMICO · 2026</p>
                 <h1 class="hero-title">
-                    Mis  5 Temas<br>
-                    <em>Favoritos</em><br>
-                    de el curso.
+                    Tema 4: <br>
+                    <em>Virtualización</em><br>
                 </h1>
                 <p class="hero-desc">
                     Fredd Andres Sandoval Valenzuela
@@ -84,6 +83,114 @@
         </div>
 
     </section>
+    <!-- ------------------------------------------------------ Artículos ------------------------------------------------- -->
+
+    <main class="article-container">
+
+        <header class="article-header">
+            <h1 class="article-title"> 4. Virtualización</h1>
+            <div class="title-underline"></div>
+        </header>
+
+        <section class="concept-flow">
+
+            <div class="flow-step">
+                <div class="flow-indicator">
+                    <div class="indicator-line"></div>
+                    <div class="indicator-node"><i class="fa-solid fa-graduation-cap"></i></div>
+                </div>
+                <div class="flow-card">
+                    <h2 class="card-subtitle">Explicación del Concepto</h2>
+                    <div class="interactive-box">
+                        <p class="card-text">
+                            La virtualización es una tecnología que sirve para "engañar" a una computadora física y
+                            hacerle creer que en realidad son varias computadoras independientes. Esto se logra usando
+                            un programa especial llamado hipervisor, que agarra los componentes reales de la máquina
+                            (como el procesador, la memoria y el disco duro) y los divide en pedacitos para crear
+                            "Máquinas Virtuales" (VM). Cada una de estas máquinas virtuales funciona por separado, está
+                            totalmente aislada de las demás y puede tener su propio sistema operativo y sus propios
+                            programas como si fuera un equipo completamente nuevo y real.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-indicator">
+                    <div class="indicator-line"></div>
+                    <div class="indicator-node"><i class="fa-solid fa-laptop-code"></i></div>
+                </div>
+                <div class="flow-card">
+                    <h2 class="card-subtitle">Ejemplo Práctico o Aplicación</h2>
+                    <div class="interactive-box">
+                        <p class="card-text">
+                            Imagina una empresa que necesita tres servidores: uno para su página web, otro para guardar
+                            su base de datos y otro para el correo de los empleados. En lugar de gastar un dineral
+                            comprando tres computadoras físicas gigantes que ocuparían mucho espacio y gastarían mucha
+                            luz, compran una sola computadora muy potente y usan la virtualización para crear los tres
+                            servidores adentro de ella de forma digital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-indicator">
+                    <div class="indicator-line"></div>
+                    <div class="indicator-node"><i class="fa-solid fa-brain"></i></div>
+                </div>
+                <div class="flow-card reflection-card">
+                    <h2 class="card-subtitle">Reflexión Personal</h2>
+
+                    <div class="reflection-sub interactive-box">
+                        <h3>¿Por qué elegí este tema?</h3>
+                        <p class="card-text">
+                            Elegi este tema porque es la tecnología en la que se basa toda la "nube" que usamos hoy
+                            en día (como Google Drive, Netflix o iCloud). Si queremos trabajar en el futuro
+                            administrando sistemas modernos en empresas grandes, entender la virtualización es algo
+                            completamente obligatorio.
+                        </p>
+                    </div>
+
+                    <div class="reflection-sub interactive-box">
+                        <h3>¿Dónde se aplica?</h3>
+                        <p class="card-text">
+                            Esto se aplica muchísimo en los Centros de Datos (Datacenters), en la creación de servicios
+                            de computación en la nube, en los entornos donde los programadores hacen pruebas de sus
+                            aplicaciones antes de lanzarlas, y para hacer copias de seguridad rápidas si una empresa
+                            llega a sufrir un ataque informático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-indicator">
+                    <div class="indicator-line"></div>
+                    <div class="indicator-node"><i class="fa-solid fa-images"></i></div>
+                </div>
+                <div class="flow-card">
+
+
+                    <div class="interactive-box clear-box">
+                        <div class="article-collage-grid">
+                            <div class="article-collage-item item-large">
+                                <img src="../assets/v1.webp" alt="Evidencia visual 1">
+                            </div>
+                            <div class="article-collage-item">
+                                <img src="../assets/v2.png" alt="Evidencia visual 2">
+                            </div>
+                            <div class="article-collage-item">
+                                <img src="../assets/v3.webp" alt="Evidencia visual 3">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- ----------------------------------------------- TARJETAS DE TEMAS -------------------------------------------------- -->
     <main class="main" id="temas">
@@ -95,7 +202,7 @@
 
         <div class="blog">
 
-            <a href="pages/Tema1.html" class="blog-post apear">
+            <a href="Tema1.html" class="blog-post apear">
                 <div class="card">
                     <div class="card-container">
                         <div class="card-front">
@@ -109,7 +216,7 @@
                                 <h2>Historia de las Computadoras</h2>
                             </div>
 
-                            <img src="assets/HDC.png" alt="Historia de las Computadoras" class="img-card">
+                            <img src="../assets/HDC.png" alt="Historia de las Computadoras" class="img-card">
                         </div>
 
                         <div class="card-back">
@@ -123,7 +230,7 @@
                 </div>
             </a>
 
-            <a href="pages/Tema2.html" class="blog-post apear">
+            <a href="Tema2.html" class="blog-post apear">
                 <div class="card">
                     <div class="card-container">
                         <div class="card-front">
@@ -137,7 +244,7 @@
                                 <h2>Arquitectura de Computadoras</h2>
                             </div>
 
-                            <img src="assets/Arquitetura.jpg" alt="Arquitectura de Computadoras" class="img-card">
+                            <img src="../assets/Arquitetura.jpg" alt="Arquitectura de Computadoras" class="img-card">
                         </div>
 
                         <div class="card-back">
@@ -151,7 +258,7 @@
                 </div>
             </a>
 
-            <a href="pages/Tema3.html" class="blog-post apear">
+            <a href="Tema3.html" class="blog-post apear">
                 <div class="card">
                     <div class="card-container">
                         <div class="card-front">
@@ -165,7 +272,7 @@
                                 <h2>Sistemas Operativos</h2>
                             </div>
 
-                            <img src="assets/sistemasOperativos.png" alt="Sistemas Operativos" class="img-card">
+                            <img src="../assets/sistemasOperativos.png" alt="Sistemas Operativos" class="img-card">
                         </div>
 
                         <div class="card-back">
@@ -178,7 +285,7 @@
                 </div>
             </a>
 
-            <a href="pages/Tema4.html" class="blog-post apear">
+            <a href="Tema4.html" class="blog-post apear">
                 <div class="card">
                     <div class="card-container">
                         <div class="card-front">
@@ -192,7 +299,7 @@
                                 <h2>Virtualización</h2>
                             </div>
 
-                            <img src="assets/1.png" alt="Virtualización" class="img-card">
+                            <img src="../assets/1.png" alt="Virtualización" class="img-card">
                         </div>
 
                         <div class="card-back">
@@ -205,7 +312,7 @@
                 </div>
             </a>
 
-            <a href="pages/Tema5.html" class="blog-post apear">
+            <a href="Tema5.html " class="blog-post apear">
                 <div class="card">
                     <div class="card-container">
                         <div class="card-front">
@@ -219,7 +326,7 @@
                                 <h2>Hardware y Software</h2>
                             </div>
 
-                            <img src="assets/2.png" alt="Hardware y Software" class="img-card">
+                            <img src="../assets/2.png" alt="Hardware y Software" class="img-card">
                         </div>
 
                         <div class="card-back">
@@ -235,14 +342,12 @@
         </div>
     </main>
 
+
     <!-- ---------------------------------------------------------- FOOTER -------------------------------------------------- -->
     <footer class="footer">
         <span class="footer-brand">Introducción a los Sistemas de Computo</span>
         <div class="footer-links">
-            <a href="">Home</a>
-            <a href="">Artículos</a>
-            <a href="">Sobre mí</a>
-            <a href="">Contacto</a>
+
         </div>
         <span class="footer-copy">© 2026 BLOG ACADÉMICO</span>
     </footer>
